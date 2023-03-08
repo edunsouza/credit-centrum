@@ -1,0 +1,93 @@
+export const getAssetsFolder = ({ ext, dir }) => {
+  const dirMap = { js: 'js', css: 'css', png: 'img', jpeg: 'img', svg: 'img' };
+  const dirName = dir || dirMap[ext];
+  return `${__dirname}/../build/assets/${dirName || ext}`;
+};
+
+export const wpUrl = 'http://gabrielpereira.infinityfreeapp.com';
+export const projectUrl = 'https://creditcentrum.com.br';
+export const cookie = '__test=1cc524907c7e9805d51d13e6cdf56e18';
+
+export const sources = [
+  { ext: 'js', file: 'jquery-core', origin: `${wpUrl}/wp-includes/js/jquery/jquery.min.js?ver=3.6.1` },
+  { ext: 'js', file: 'jquery-migrate', origin: `${wpUrl}/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2` },
+  { ext: 'js', file: 'hello-theme-frontend', origin: `${wpUrl}/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0` },
+  { ext: 'js', file: 'jquery-numerator', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min.js?ver=0.2.1` },
+  { ext: 'js', file: 'elementor-webpack-runtime', origin: `${wpUrl}/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.11.0` },
+  { ext: 'js', file: 'elementor-frontend-modules', origin: `${wpUrl}/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.11.0` },
+  { ext: 'js', file: 'elementor-waypoints', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2` },
+  { ext: 'js', file: 'jquery-ui-core', origin: `${wpUrl}/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2` },
+  { ext: 'js', file: 'elementor-frontend', origin: `${wpUrl}/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.11.0` },
+  { ext: 'js', file: 'text-editor.2c35aafbe5bf0e127950.bundle.min', origin: `${wpUrl}/wp-content/plugins/elementor/assets/js/text-editor.2c35aafbe5bf0e127950.bundle.min.js` },
+  { ext: 'js', file: 'counter.02cef29c589e742d4c8c.bundle.min', origin: `${wpUrl}/wp-content/plugins/elementor/assets/js/counter.02cef29c589e742d4c8c.bundle.min.js` },
+  { ext: 'js', file: 'toggle.31881477c45ff5cf9d4d.bundle.min', origin: `${wpUrl}/wp-content/plugins/elementor/assets/js/toggle.31881477c45ff5cf9d4d.bundle.min.js` },
+  { ext: 'js', file: 'wp-emoji-release.min', origin: `${wpUrl}/wp-includes/js/wp-emoji-release.min.js?ver=6.1.1` },
+
+  { ext: 'png', file: 'white_logo-300x125', origin: `${wpUrl}/wp-content/uploads/2023/02/LOGO-LETRA-BRANCA-Copia-300x125.png` },
+  { ext: 'png', file: 'white_logo-768x320', origin: `${wpUrl}/wp-content/uploads/2023/02/LOGO-LETRA-BRANCA-Copia-768x320.png` },
+  { ext: 'png', file: 'white_logo', origin: `${wpUrl}/wp-content/uploads/2023/02/LOGO-LETRA-BRANCA-Copia.png` },
+  { ext: 'png', file: 'black_logo_icon-150x150', origin: `${wpUrl}/wp-content/uploads/2023/02/logo-somente-simbolo-fundo-preto-150x150.png` },
+  { ext: 'png', file: 'black_logo_icon-300x300', origin: `${wpUrl}/wp-content/uploads/2023/02/logo-somente-simbolo-fundo-preto-300x300.png` },
+  { ext: 'png', file: 'black_logo_icon', origin: `${wpUrl}/wp-content/uploads/2023/02/logo-somente-simbolo-fundo-preto.png` },
+  { ext: 'png', file: 'quality_seal-300x300', origin: `${wpUrl}/wp-content/uploads/2023/03/100-300x300.png` },
+  { ext: 'png', file: 'quality_seal-150x150', origin: `${wpUrl}/wp-content/uploads/2023/03/100-150x150.png` },
+  { ext: 'png', file: 'quality_seal', origin: `${wpUrl}/wp-content/uploads/2023/03/100.png` },
+  { ext: 'png', file: 'home-150x150', origin: `${wpUrl}/wp-content/uploads/2023/02/1-1-150x150.png` },
+  { ext: 'png', file: 'home-300x300', origin: `${wpUrl}/wp-content/uploads/2023/02/1-1-300x300.png` },
+  { ext: 'png', file: 'home', origin: `${wpUrl}/wp-content/uploads/2023/02/1-1.png` },
+  { ext: 'png', file: 'construction-150x150', origin: `${wpUrl}/wp-content/uploads/2023/02/2-1-150x150.png` },
+  { ext: 'png', file: 'construction-300x300', origin: `${wpUrl}/wp-content/uploads/2023/02/2-1-300x300.png` },
+  { ext: 'png', file: 'construction', origin: `${wpUrl}/wp-content/uploads/2023/02/2-1.png` },
+  { ext: 'png', file: 'speedometer-150x150', origin: `${wpUrl}/wp-content/uploads/2023/02/3-1-150x150.png` },
+  { ext: 'png', file: 'speedometer-300x300', origin: `${wpUrl}/wp-content/uploads/2023/02/3-1-300x300.png` },
+  { ext: 'png', file: 'speedometer', origin: `${wpUrl}/wp-content/uploads/2023/02/3-1.png` },
+  { ext: 'png', file: 'handshake-150x150', origin: `${wpUrl}/wp-content/uploads/2023/02/5-150x150.png` },
+  { ext: 'png', file: 'handshake-300x300', origin: `${wpUrl}/wp-content/uploads/2023/02/5-300x300.png` },
+  { ext: 'png', file: 'handshake', origin: `${wpUrl}/wp-content/uploads/2023/02/5.png` },
+  { ext: 'png', file: 'client_1', origin: `${wpUrl}/wp-content/uploads/2023/02/cliente-01.png` },
+  { ext: 'png', file: 'client_1-300x259', origin: `${wpUrl}/wp-content/uploads/2023/02/cliente-01-300x259.png` },
+
+  { ext: 'jpeg', file: 'client_2-150x150', origin: `${wpUrl}/wp-content/uploads/2023/02/cliente-02-150x150.jpeg` },
+  { ext: 'jpeg', file: 'client_2-300x300', origin: `${wpUrl}/wp-content/uploads/2023/02/cliente-02-300x300.jpeg` },
+  { ext: 'jpeg', file: 'client_2', origin: `${wpUrl}/wp-content/uploads/2023/02/cliente-02.jpeg` },
+  { ext: 'jpeg', file: 'client_3-150x150', origin: `${wpUrl}/wp-content/uploads/2023/02/cliente-03-150x150.jpeg` },
+  { ext: 'jpeg', file: 'client_3-300x300', origin: `${wpUrl}/wp-content/uploads/2023/02/cliente-03-300x300.jpeg` },
+  { ext: 'jpeg', file: 'client_3', origin: `${wpUrl}/wp-content/uploads/2023/02/cliente-03.jpeg` },
+
+  { ext: 'css', file: 'wp-includes_css_dist_block-library_style', origin: `${wpUrl}/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1` },
+  { ext: 'css', file: 'wp-includes_css_classic-themes', origin: `${wpUrl}/wp-includes/css/classic-themes.min.css?ver=1` },
+  { ext: 'css', file: 'wp-content_plugins_header-footer-elementor_assets_css_header-footer-elementor', origin: `${wpUrl}/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.6.13` },
+  { ext: 'css', file: 'wp-content_plugins_elementor_assets_lib_eicons_css_elementor-icons', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.18.0` },
+  { ext: 'css', file: 'wp-content_plugins_elementor_assets_css_frontend-lite', origin: `${wpUrl}/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.11.0` },
+  { ext: 'css', file: 'wp-content_plugins_elementor_assets_lib_swiper_v8_css_swiper', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5` },
+  { ext: 'css', file: 'wp-content_uploads_elementor_css_post-4', origin: `${wpUrl}/wp-content/uploads/elementor/css/post-4.css?ver=1676343251` },
+  { ext: 'css', file: 'wp-content_uploads_elementor_css_global', origin: `${wpUrl}/wp-content/uploads/elementor/css/global.css?ver=1676343251` },
+  { ext: 'css', file: 'wp-content_uploads_elementor_css_post-7', origin: `${wpUrl}/wp-content/uploads/elementor/css/post-7.css?ver=1677848968` },
+  { ext: 'css', file: 'wp-content_plugins_header-footer-elementor_inc_widgets-css_frontend', origin: `${wpUrl}/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.6.13` },
+  { ext: 'css', file: 'wp-content_themes_hello-elementor_style', origin: `${wpUrl}/wp-content/themes/hello-elementor/style.min.css?ver=2.6.1` },
+  { ext: 'css', file: 'wp-content_themes_hello-elementor_theme', origin: `${wpUrl}/wp-content/themes/hello-elementor/theme.min.css?ver=2.6.1` },
+  { ext: 'css', file: 'wp-content_plugins_elementor_assets_lib_font-awesome_css_fontawesome', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3` },
+  { ext: 'css', file: 'wp-content_plugins_elementor_assets_lib_font-awesome_css_solid', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3` },
+  { ext: 'css', file: 'wp-content_plugins_elementor_assets_lib_font-awesome_css_brands', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3` },
+  { ext: 'css', file: 'wp-content_plugins_elementor_assets_lib_animations_animations', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.11.0` },
+
+  { ext: 'eot', file: 'eicons', dir: 'fonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.18.0` },
+  { ext: 'eot', file: 'eicons', dir: 'fonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.18.0#iefix` },
+  { ext: 'woff', file: 'eicons', dir: 'fonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.18.0` },
+  { ext: 'woff2', file: 'eicons', dir: 'fonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.18.0` },
+  { ext: 'ttf', file: 'eicons', dir: 'fonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.18.0` },
+  { ext: 'svg', file: 'eicons', dir: 'fonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.18.0#eicon` },
+
+  { ext: 'eot', file: 'fa-brands-400', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot` },
+  { ext: 'eot', file: 'fa-solid-900', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot` },
+  { ext: 'eot', file: 'fa-brands-400', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot?#iefix` },
+  { ext: 'eot', file: 'fa-solid-900', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot?#iefix` },
+  { ext: 'woff', file: 'fa-brands-400', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff` },
+  { ext: 'woff', file: 'fa-solid-900', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff` },
+  { ext: 'woff2', file: 'fa-brands-400', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2` },
+  { ext: 'woff2', file: 'fa-solid-900', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2` },
+  { ext: 'ttf', file: 'fa-brands-400', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf` },
+  { ext: 'ttf', file: 'fa-solid-900', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf` },
+  { ext: 'svg', file: 'fa-brands-400', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg#fontawesome` },
+  { ext: 'svg', file: 'fa-solid-900', dir: 'webfonts', origin: `${wpUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg#fontawesome` },
+];
