@@ -6,11 +6,11 @@
   "scripts": {
     "start": "npx serve build",
     "clear": "rm -rf build",
-    "load:assets": "npx zx automation/load-assets.mjs",
-    "make:index": "npx zx automation/make-index.mjs",
-    "make:favicon": "npx zx automation/make-favicon.mjs",
-    "build": "npm run load:assets; npm run make:index; npm run make:favicon",
-    "deploy": "CLOUDFLARE_ACCOUNT_ID=22695ad6e654a6290b48812b820e553a npx wrangler pages publish build"
+    "fetch": "npx zx automation/fetch.mjs",
+    "create": "npx zx automation/create.mjs",
+    "minify": "npx zx automation/minify.mjs",
+    "build": "npm run clear; npm run fetch; npm run create; npm run minify",
+    "deploy": "CLOUDFLARE_ACCOUNT_ID=22695ad6e654a6290b48812b820e553a npx wrangler pages publish ./build --project-name credit-centrum"
   },
   "repository": {
     "type": "git",

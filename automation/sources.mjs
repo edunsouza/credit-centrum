@@ -1,7 +1,7 @@
 export const getAssetsFolder = ({ ext, dir }) => {
   const dirMap = { js: 'js', css: 'css', png: 'img', jpeg: 'img', svg: 'img' };
   const dirName = dir || dirMap[ext];
-  return `${__dirname}/../build/assets/${dirName || ext}`;
+  return `./build/assets/${dirName || ext}`;
 };
 
 export const wpUrl = 'http://gabrielpereira.infinityfreeapp.com';
@@ -22,6 +22,9 @@ export const sources = [
   { ext: 'js', file: 'counter.02cef29c589e742d4c8c.bundle.min', origin: `${wpUrl}/wp-content/plugins/elementor/assets/js/counter.02cef29c589e742d4c8c.bundle.min.js` },
   { ext: 'js', file: 'toggle.31881477c45ff5cf9d4d.bundle.min', origin: `${wpUrl}/wp-content/plugins/elementor/assets/js/toggle.31881477c45ff5cf9d4d.bundle.min.js` },
   { ext: 'js', file: 'wp-emoji-release.min', origin: `${wpUrl}/wp-includes/js/wp-emoji-release.min.js?ver=6.1.1` },
+  { ext: 'js', file: 'jquery-bind-first', origin: `${wpUrl}/wp-content/plugins/pixelyoursite/dist/scripts/jquery.bind-first-0.2.3.min.js?ver=6.1.1` },
+  { ext: 'js', file: 'js-cookie', origin: `${wpUrl}/wp-content/plugins/pixelyoursite/dist/scripts/js.cookie-2.1.3.min.js?ver=2.1.3` },
+  { ext: 'js', file: 'pys', origin: `${wpUrl}/wp-content/plugins/pixelyoursite/dist/scripts/public.js?ver=9.3.3` },
 
   { ext: 'png', file: 'white_logo-300x125', origin: `${wpUrl}/wp-content/uploads/2023/02/LOGO-LETRA-BRANCA-Copia-300x125.png` },
   { ext: 'png', file: 'white_logo-768x320', origin: `${wpUrl}/wp-content/uploads/2023/02/LOGO-LETRA-BRANCA-Copia-768x320.png` },
